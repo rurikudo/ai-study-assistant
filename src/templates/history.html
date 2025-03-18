@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5 bg-light">
+    <!-- ヘッダー -->
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="h4 mb-0">
+                <i class="bi bi-pencil"></i> Study Assistant
+            </h1>
+        </div>
+    </header>
+
+    <div class="row bg-light d-flex align-items-center justify-content-center w-80 p-3 mt-3">
+        <!-- if there is no history data, show the following message -->
+        {% if not history_qa and not history_gen_question %}
+        <h2>No History Found</h2>
+        {% endif %}
+        <!-- Q&A History  -->
+        {% if history_qa %}
+        <h2>Q&A History</h2>
+            {% for row in history_qa %}
+            <div class="mt-2 p-2">
+            <span>{{ row[0] }}</span>
+            <div class="p-2 bg-light shadow rounded w-80">
+                <p><strong>🧑‍🎓 You:</strong> {{ row[1] }}</p>
+                <p><strong>🤖 Assistant:</strong> {{ row[3] | safe }}</p>
+            </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    
+    {% if history_gen_question %}
+    <div class="row bg-light d-flex align-items-center justify-content-center w-80 p-3 mt-3"></div>
+    <h2>Practice Question History</h2>
+        {% for row in history_gen_question %}
+        <span>{{ row[0] }}</span>
+        <div class="mt-2 p-2 bg-light shadow rounded w-80">
+            <p>{{ row[1] | safe }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+
+    <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Back</a>
+
+</body>
+</html>
