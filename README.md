@@ -11,7 +11,7 @@ Also, students want to study with the main material or their notebook. But they 
 
 
 # How it works
-![Alt text](images/design.png)
+![Alt text](images/overview.png)
 
 ### Approach
 This assistant has all the scripts of past lectures, textbooks, and relevant documents in RAG.
