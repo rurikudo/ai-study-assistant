@@ -56,10 +56,18 @@ pip install "crewai[tools]"
 pip install llama-index
 ```
 
-3. Start Flask app
+3. Prepare `.env` file
+```
+OPENAI_API_KEY = "YOUR_API_KEY"
+LLM_MODEL = "gpt-4o-mini"
+PAST_QUESTION_FILE = "past_question.pdf" # File name placed in the knowledge directory
+MAIN_MATERIAL_FILE = "main_material.pdf" # File name placed in the knowledge directory
+```
+
+4. Start Flask app
 ```
 $ python src/app.py
 ```
 
-4. Access Web page: http://127.0.0.1:5000/
+5. Access Web page: http://127.0.0.1:5000/
 ![Alt text](images/sample.png)
