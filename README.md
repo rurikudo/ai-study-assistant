@@ -73,5 +73,8 @@ $ python src/app.py
 ![Alt text](images/sample.png)
 
 # Demo
-https://github.com/user-attachments/assets/638136c8-fc28-49f5-9051-8ab1b10e1834
+
+
+https://github.com/user-attachments/assets/b607c8e2-8928-46be-8193-d67c721ba090
+
 
