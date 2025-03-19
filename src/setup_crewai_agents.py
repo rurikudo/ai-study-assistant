@@ -24,6 +24,7 @@ class TeachingAssistant:
         documents_textbook = SimpleDirectoryReader(os.path.join(self.root_data_dir, "Textbook")).load_data(".pdf")
         documents = documents_record + documents_textbook
         Settings.chunk_size = 1024
+        Settings.llm = self.llm_model
         nodes = Settings.node_parser.get_nodes_from_documents(documents)
         vector_index = VectorStoreIndex(nodes)
         vector_query_engine = vector_index.as_query_engine()

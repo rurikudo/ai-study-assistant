@@ -12,8 +12,8 @@ import os
 load_dotenv()
 app = Flask(__name__)
 
-QA_HISTORY_FILE = "qa_history.txt"
-GEN_QUESTION_HISTORY_FILE = "gen_question_history.txt"
+QA_HISTORY_FILE = "history/qa_history.txt"
+GEN_QUESTION_HISTORY_FILE = "history/gen_question_history.txt"
 
 open_ai_key = os.getenv('OPENAI_API_KEY')
 if not open_ai_key:

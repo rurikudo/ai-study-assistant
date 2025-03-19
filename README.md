@@ -72,6 +72,6 @@ $ python src/app.py
 5. Access Web page: http://127.0.0.1:5000/
 ![Alt text](images/sample.png)
 
-### Demo
+# Demo
 https://github.com/user-attachments/assets/638136c8-fc28-49f5-9051-8ab1b10e1834
 
