@@ -1,4 +1,3 @@
-
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, SummaryIndex
 from llama_index.core import Settings
 from llama_index.core.query_engine import RouterQueryEngine
@@ -8,11 +7,13 @@ from llama_index.llms.openai import OpenAI
 
 import os
 
+
 class LlamaIndexQueryEngine:
     """
     This class is used to setup the LlamaIndex for the application.
     It loads the data from the specified directory and prepares the query engine.
     """
+
     def __init__(self, data_dir: str, llm_model: str = "gpt-4o-mini"):
         """
         Initialize the LlamaIndexSetup class.
@@ -25,7 +26,6 @@ class LlamaIndexQueryEngine:
         self.summary_tool = self.prepare_summary_tool(nodes)
         self.vector_tool = self.prepare_vector_tool(nodes)
         self.query_engine = self.prepare_query_engine()
-
 
     def load_documents(self):
         documents = []
@@ -72,5 +72,3 @@ class LlamaIndexQueryEngine:
             ],
             verbose=True,
         )
-
-
