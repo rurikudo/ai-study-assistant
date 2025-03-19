@@ -26,7 +26,7 @@ class TeachingAssistant:
         Settings.chunk_size = 1024
         nodes = Settings.node_parser.get_nodes_from_documents(documents)
         vector_index = VectorStoreIndex(nodes)
-        vector_query_engine = vector_index.as_query_engine(llm=self.llm_model)
+        vector_query_engine = vector_index.as_query_engine()
         return LlamaIndexTool.from_query_engine(
                         vector_query_engine,
                         name="Lecture Record Query Tool",
