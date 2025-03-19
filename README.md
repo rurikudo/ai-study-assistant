@@ -1,16 +1,15 @@
 # AI Study Assistant 
 
-This is my final project for the "LLM for Business with Python" class at Stanford Continuing Studies. 
-
+*This is a final project for the "LLM for Business with Python" class at Stanford Continuing Studies. 
 
 AI Study Assistant supports Stanford students by providing useful parts of past lectures and textbooks according to the questions from students.
-
-https://github.com/user-attachments/assets/b607c8e2-8928-46be-8193-d67c721ba090
-
-
 ### Background
 International students sometimes have problems following lectures in real time. Therefore, many students usually record lectures with an application, e.g. otter.ai, which allows us to export scripts into text files. They want to use the data efficiently when they prepare for exams.
 Also, students want to study with the main material or their notebook. But they have a lot of sub-materials. They might want to retrieve important or useful information from sub-materials while they study the main material. 
+
+### Demo
+https://github.com/user-attachments/assets/b607c8e2-8928-46be-8193-d67c721ba090
+
 
 
 # How it works
